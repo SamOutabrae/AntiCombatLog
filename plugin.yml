@@ -1,9 +1,0 @@
-name: AntiCombatLogger
-version: 0.1
-author: SamOutabrae
-
-main: me.thesam.plugins.AntiCombatLog
-
-commands:
-   combatConfig:
-      
