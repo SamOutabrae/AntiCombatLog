@@ -25,7 +25,7 @@ public class ConfigCommand implements CommandExecutor {
 				}
 			}
 			
-			if(args[0].equalsIgnoreCase("valueof")) {
+			if(args[0].equalsIgnoreCase("value")) {
 				if(args.length < 2) {
 					sender.sendMessage(notEnoughArgs);
 					return true;
