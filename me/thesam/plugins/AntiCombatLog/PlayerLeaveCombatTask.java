@@ -14,6 +14,6 @@ public class PlayerLeaveCombatTask extends BukkitRunnable {
 
 	@Override
 	public void run() {
-		
+		Main.playersToKill.remove(Main.playersToKill.indexOf(this.player));
 	}
 }
