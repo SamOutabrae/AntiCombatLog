@@ -65,11 +65,9 @@ public class DataLoader {
 	}
 	
 	
-	// TODO add handling for if these return null
-	
 	public boolean getPlayersOnly() {
 		
-		Object playersOnly = configData.get("playersOnly"));
+		Object playersOnly = configData.get("playersOnly");
 		
 		if(configData.equals(null)) {
 			return true;
@@ -80,7 +78,7 @@ public class DataLoader {
 	
 	public boolean getAnnounce() {
 		
-		Object announce = configData.get("announce"));
+		Object announce = configData.get("announce");
 		
 		if(announce.equals(null)) {
 			return true;
@@ -90,7 +88,7 @@ public class DataLoader {
 	}
 	
 	public int getTimeout() {
-		Object timeout = configData.get("timeout"));
+		Object timeout = configData.get("timeout");
 		
 		if(timeout.equals(null)) {
 			return 200;
