@@ -3,12 +3,9 @@ package me.thesam.plugins.AntiCombatLog;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-
-import javax.xml.stream.events.Characters;
 
 public class DataLoader {
 	
@@ -66,5 +63,11 @@ public class DataLoader {
 		return;
 	}
 	
-		
+	public boolean getPlayersOnly() {
+		return Boolean.parseBoolean((String) configData.get("playersOnly"));
+	}
+	
+	public int getTimeout() {
+		return Integer.parseInt((String) configData.get("timeout"));
+	}
 }
