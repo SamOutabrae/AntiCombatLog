@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 	
-	public static DataLoader dataLoader = new DataLoader();
+	public static DataManager dataManager = new DataManager();
 	
 	public static ArrayList<Player> playersToKill = new ArrayList<Player>();
 	
@@ -18,8 +18,8 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(new Listeners(), this);
 		
-		announce = dataLoader.getAnnounce();
-		combatTimeout = dataLoader.getTimeout();
+		announce = dataManager.getAnnounce();
+		combatTimeout = dataManager.getTimeout();
 	}
 	
 	@Override
