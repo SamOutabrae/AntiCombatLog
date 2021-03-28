@@ -17,7 +17,7 @@ public class DataLoader {
 		
 		configData.put("timeout", null);
 		configData.put("playersOnly", null);
-		configData.put("", configData)
+		configData.put("", configData);
 		
 		File f = new File(path + "AntiCombatLog.conf");
 		
