@@ -17,6 +17,7 @@ public class DataLoader {
 		
 		configData.put("timeout", null);
 		configData.put("playersOnly", null);
+		configData.put("", configData)
 		
 		File f = new File(path + "AntiCombatLog.conf");
 		
@@ -63,8 +64,15 @@ public class DataLoader {
 		return;
 	}
 	
+	
+	// TODO add handling for if these return null
+	
 	public boolean getPlayersOnly() {
 		return Boolean.parseBoolean((String) configData.get("playersOnly"));
+	}
+	
+	public boolean getAnnounce() {
+		return Boolean.parseBoolean( (String) configData.get("annoucne"));
 	}
 	
 	public int getTimeout() {
