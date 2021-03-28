@@ -7,13 +7,13 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
-public class DataLoader {
+public class DataManager {
 	
 	String path = new File(".").getAbsolutePath();
 	
 	HashMap<String, Object> configData = new HashMap<String, Object>();
 	
-	public DataLoader() throws FileNotFoundException {
+	public DataManager() {
 		
 		configData.put("timeout", null);
 		configData.put("playersOnly", null);
