@@ -68,14 +68,34 @@ public class DataLoader {
 	// TODO add handling for if these return null
 	
 	public boolean getPlayersOnly() {
-		return Boolean.parseBoolean((String) configData.get("playersOnly"));
+		
+		Object playersOnly = configData.get("playersOnly"));
+		
+		if(configData.equals(null)) {
+			return true;
+		}
+		
+		return Boolean.parseBoolean( (String) playersOnly);
 	}
 	
 	public boolean getAnnounce() {
-		return Boolean.parseBoolean( (String) configData.get("annoucne"));
+		
+		Object announce = configData.get("announce"));
+		
+		if(announce.equals(null)) {
+			return true;
+		}
+		
+		return Boolean.parseBoolean( (String) announce);
 	}
 	
 	public int getTimeout() {
-		return Integer.parseInt((String) configData.get("timeout"));
+		Object timeout = configData.get("timeout"));
+		
+		if(timeout.equals(null)) {
+			return 200;
+		}
+		
+		return Integer.parseInt( (String) timeout);
 	}
 }
