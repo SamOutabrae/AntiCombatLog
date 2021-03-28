@@ -8,6 +8,10 @@ public class Listeners implements Listener {
 	
 	@EventHandler
 	public void onDisconnect(PlayerQuitEvent e) {
-		
+		if(Main.playersToKill.contains(e.getPlayer())) {
+			e.getPlayer().setHealth(0.0D);
+		}
 	}
+	
+	
 }
