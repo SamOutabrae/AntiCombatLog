@@ -2,7 +2,7 @@ package me.thesam.plugins.AntiCombatLog;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -47,7 +47,7 @@ public class DataManager {
 			for(String line : fileDataArray) {
 				String[] config = line.split("=");
 				
-				configData.put(config[0], config[1]);
+				configData.put(config[0], config[1].replace("\n", ""));
 				
 				continue;
 			}
@@ -96,4 +96,32 @@ public class DataManager {
 		
 		return Integer.parseInt( (String) timeout);
 	}
+
+	public void saveConf() {
+		File f = new File(this.path + "AntiCombatLog.conf");
+		
+		if(f.exists()) {
+			f.delete();
+		}
+		
+		try {
+			
+			FileWriter fw = new FileWriter(f);
+			for(String key : this.configData.keySet()) {
+				fw.write(key + "=" + this.configData.get(key) + ";\n");
+			}
+			
+			
+			fw.close();
+			
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return;
+	}
+	
+	
 }
